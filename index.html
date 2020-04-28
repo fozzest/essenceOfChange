@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Theis Final SIte WIP</title>
+		<meta name="description" content="A Masonry-powered grid layout with a motion hover effect on the grid items and a scrollable content view." />
+		<meta name="keywords" content="masonry, grid layout, hover effect, content preview, javascript, gsap, template, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/wwa8pwf.css">
+
+		<script>document.documentElement.className="js";
+			var supportsCssVars=function()
+				{var e,t=document.createElement("style");
+				return t.innerHTML="root: { --tmp-var: bold; }",
+				document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)"))
+				,t.parentNode.removeChild(t),e};supportsCssVars()||alert("");
+		</script> 
+	</head>
+
+
+	<body class="loading">
+
+		<main>
+			<div class="frame">
+				<div class="title">
+					<h4 class="title__name">Essence of Change</h4>
+				</div>
+			</div>
+
+			<div class="grid-wrap">
+				<div class="grid">
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg" id="start"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/cycles01.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Revivals</h3>
+						<h4 class="grid__item-number">Cycles</h4>
+					</a>
+					<a href="#" class="grid__item" >
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/cycles04.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Invention of Tradition</h3>
+						<h4 class="grid__item-number">Gothic</h4>
+					</a>
+					<a href="#" class="grid__item" id="element03">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/cycles08.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Step 1</h3>
+						<h4 class="grid__item-number">Innovation</h4>
+					</a>
+					<a href="#" class="grid__item" >
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/cycles06.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Step 2</h3>
+						<h4 class="grid__item-number">Proliferation</h4>
+					</a>
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/cycles09.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Step 3</h3>
+						<h4 class="grid__item-number">Tradition</h4>
+					</a>
+					<a href="#" class="grid__item" id="element04">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/proposals01.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Proposals</h3>
+						<h4 class="grid__item-number">Proposals</h4>
+					</a>
+					<a href="#" class="grid__item" >
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/cycles05.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Fluidity of Authenticity</h3>
+						<h4 class="grid__item-number">Authentic</h4>
+					</a>
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/cycles03.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Step 4</h3>
+						<h4 class="grid__item-number">Abstraction</h4>
+					</a>
+					<a href="#" class="grid__item" >
+						<div class="grid__item-bg" id="end"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/proposals04.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Irony and Ironic</h3>
+						<h4 class="grid__item-number">Lost</h4>
+					</a>
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/cycles11.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Identity</h3>
+						<h4 class="grid__item-number">Identity</h4>
+					</a>
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/proposals05.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Bias</h3>
+						<h4 class="grid__item-number">Bias</h4>
+					</a>
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/proposals02.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Providing Alternatives</h3>
+						<h4 class="grid__item-number">Objectivity</h4>
+					</a>										
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/proposals06.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Aggregate</h3>
+						<h4 class="grid__item-number">Intersections</h4>
+					</a>
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/cycles10.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Essence</h3>
+						<h4 class="grid__item-number">Essence</h4>
+					</a>
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/ubiquities01.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Seeking Truths</h3>
+						<h4 class="grid__item-number">Ubiquities</h4>
+					</a>
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/ubiquities03.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Monobloc</h3>
+						<h4 class="grid__item-number">Monobloc</h4>
+					</a>
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/ubiquities09.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Plastic</h3>
+						<h4 class="grid__item-number">Synonymous</h4>
+					</a>
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/ubiquities04.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Within a Cycle</h3>
+						<h4 class="grid__item-number">Source</h4>
+					</a>	
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/ubiquities05.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Growth</h3>
+						<h4 class="grid__item-number">Expand</h4>
+					</a>									
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/ubiquities02.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Futures</h3>
+						<h4 class="grid__item-number">Futures</h4>
+					</a>
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/ubiquities08.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Change</h3>
+						<h4 class="grid__item-number">Change</h4>
+					</a>										
+				</div>
+
+	<!-- POP UP IMAGES -->
+
+		<div class="content01">
+				<img class="content__img" src="img/ubiquities02.png" alt="Some image" />
+				<img class="content__img" src="img/cycles02.png" alt="Some image" />
+				<img class="content__img" src="img/ubiquities01.png" alt="Some image" />
+				<img class="content__img" src="img/proposals02.png" alt="Some image" />
+				<img class="content__img" src="img/cycles07.png" alt="Some image" />
+				<img class="content__img" src="img/ubiquities03.png" alt="Some image" />
+				<img class="content__img" src="img/cycles03.png" alt="Some image" />
+				<img class="content__img" src="img/ubiquities04.png" alt="Some image" />
+				<img class="content__img" src="img/ubiquities05.png" alt="Some image" />
+				<img class="content__img" src="img/cycles05.png" alt="Some image" />
+				<img class="content__img" src="img/cycles06.png" alt="Some image" />
+				<h3 class="content__title"></h3>
+			</div>
+
+			</div>
+
+
+	<!-- ESSAYS -->
+
+
+			<div class="content">
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/cycles01.png" alt="Some image" />
+						<h2 class="content__item-title">Cycles</h2>
+					</div>
+					<h3 class="content__item-subtitle">New Normal Revival Symbol Gothic</h3>
+					<div class="content__item-text">
+						<p>There is Something beautifully ubiquitous, something post-colonial, decentralised, everlasting as the resin stacking chair. Synonymous with weddings, beaches, lunches, pool parties and dining tables.</p>
+						<p>Monobloc chairs embody many questions and contradictions posed by today’s consumer society. On the one hand, it is the epitome of an affordable—and thus democratic— piece of furniture. On the other, it is criticised for falling short of sustainability targets. </p>
+					</div>
+				</div>
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/cycles04.png" alt="Some image" />
+						<h2 class="content__item-title">Invention of Tradition</h2>
+					</div>
+					<h3 class="content__item-subtitle">Examining Revitalised Design Movements in Victorian and Contemporary Western Society</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>												
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/cycles08.png" alt="Some image" />
+						<h2 class="content__item-title">Step 1: Innovation</h2>
+					</div>
+					<h3 class="content__item-subtitle">Authentic Excitement</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/cycles06.png" alt="Some image" />
+						<h2 class="content__item-title">Step 2: Proliferation</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/cycles09.png" alt="Some image" />
+						<h2 class="content__item-title">Step 3: Tradition</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/6.jpg" alt="Some image" />
+						<h2 class="content__item-title">Proposals</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/7.jpg" alt="Some image" />
+						<h2 class="content__item-title">Fluidity of Authenticity</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/cycles03.png" alt="Some image" />
+						<h2 class="content__item-title">Step 4: Abstraction</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/proposals04.png" alt="Some image" />
+						<h2 class="content__item-title">Irony and Ironic</h2>
+					</div>
+					<h3 class="content__item-subtitle">Lost Indenties</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+					
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/cycles11.png" alt="Some image" />
+						<h2 class="content__item-title">Identity</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>					
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/proposals05.png" alt="Some image" />
+						<h2 class="content__item-title">Bias</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>						
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/proposals02.png" alt="Some image" />
+						<h2 class="content__item-title">Objectivity</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>						
+					</div>					
+				</div><!-- /content__item -->	
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/proposals06.png" alt="Some image" />
+						<h2 class="content__item-title">Intersections</h2>
+					</div>
+					<h3 class="content__item-subtitle">Aggregates</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/12.jpg" alt="Some image" />
+						<h2 class="content__item-title">Essence</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/cycles10.png" alt="Some image" />
+						<h2 class="content__item-title">Seeking Truths</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/ubiquities03.png" alt="Some image" />
+						<h2 class="content__item-title">Monobloc</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/ubiquities09.png" alt="Some image" />
+						<h2 class="content__item-title">Plastic</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/ubiquities04.png" alt="Some image" />
+						<h2 class="content__item-title">Within a Cycle</h2>
+					</div>
+					<h3 class="content__item-subtitle">Source of Ubiquity</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/ubiquities05.png" alt="Some image" />
+						<h2 class="content__item-title">Growth</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+							<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>				
+					</div>
+				</div><!-- /content__item -->	
+
+
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/ubiquities02.png" alt="Some image" />
+						<h2 class="content__item-title">Futures</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div><!-- /content__item -->
+				
+				<div class="content__item">
+					<div class="content__item-intro">
+						<img class="content__item-img" src="img/ubiquities08.png" alt="Some image" />
+						<h2 class="content__item-title">Change</h2>
+					</div>
+					<h3 class="content__item-subtitle">Subtitle</h3>
+					<div class="content__item-text">
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+						<p>
+						Tradition is used as scaffolding to ground a culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a group identity with a set of moral values that oppose large scale social change and progress. Tradition is used dually by traditionalists and progressive parties to accomplish their goals, with both groups appropriating and recontextualising historic ‘tradition’ to produce reception in audiences. It may even be suggested that by inventing traditions, the act of dislodging aesthetics from their original purpose and meaning, and applying new contexts, makes them more susceptible to appropriation and repurposing in industry, and furthermore weakens the original meaning of the style they pull from.
+						</p>
+					</div>
+				</div>
+				
+																							
+			<button class="content__close">Back</button>
+			<svg class="content__indicator icon icon--caret"><use xlink:href="#icon-caret"></use></svg>
+			
+			</div>
+		</main>
+
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="leader-line.min.js"></script>
+		<script src="js/demo.js"></script>
+		<script src="js/imageTrail.js"></script>
+	</body>
+</html>
