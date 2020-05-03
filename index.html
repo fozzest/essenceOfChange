@@ -24,7 +24,34 @@
 	<body class="loading">
 
 		<main>
-			<div class="frame">
+
+		<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="index.html">Expore</a>
+  			<a href="about.html">About</a>
+  			<a href="paper.html">Paper</a>
+  
+			</div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+
+<div class="frame">
 				<div class="title">
 					<h4 class="title__name">Essence of Change</h4>
 				</div>
@@ -32,6 +59,14 @@
 
 			<div class="grid-wrap">
 				<div class="grid">
+					<a href="#" class="grid__item">
+						<div class="grid__item-bg" id="start"></div>
+						<div class="grid__item-wrap">
+							<img class="grid__item-img" src="img/cycles01.png" alt="Some image" />
+						</div>
+						<h3 class="grid__item-title">Revivals</h3>
+						<h4 class="grid__item-number">Cycles</h4>
+					</a><div class="grid">
 					<a href="#" class="grid__item">
 						<div class="grid__item-bg" id="start"></div>
 						<div class="grid__item-wrap">

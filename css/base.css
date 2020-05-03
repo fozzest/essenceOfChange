@@ -37,9 +37,8 @@ body {
 }
 
 h4{
-	font-family: "futura", futura-pt-condensed, sans-serif;
-	font-weight: 1000;
-	font-style: italic;
+	font-family: 'TiemposHeadline', serif;	font-weight: 1000;
+	
 	font-size: 150vh;
 	color:#2B2B2B;
 }
@@ -89,7 +88,8 @@ h2{
 
 a {
 	text-decoration: none;
-	color: var(--color-link);
+	border-bottom: 0.05em dotted #57585c;
+	cursor: pointer;
 	outline: none;
 }
 
@@ -482,3 +482,264 @@ main {
 	height: 10%;
 	background-size: cover;
 }
+
+
+
+
+/* SIDENAV */
+
+
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+  }
+  
+  .sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+	color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+  
+  #main {
+	transition: margin-left .5s;
+	padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
+
+
+  /* TOOLTIP */
+
+ 
+
+
+  .qtip {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	color: #27347E;
+	border-bottom: 0.05em dotted #27347E;
+
+	box-sizing: border-box;
+	font-style: normal;
+	transition:all .25s ease-in-out
+  }
+  .qtip:hover {color:#57585c;border-bottom:0.05em dotted #57585c}
+  
+
+  .qtip:before {
+	content: attr(data-tip);
+	font-size: 14px;
+	position: absolute;
+	background: #e8e8e8;
+	color: #57585c;
+	line-height: 1.2em;
+	padding: 0.3em;
+	font-style: normal;
+	min-width: 120px;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease-in-out;
+	font-family: "SohneB", sans-serif;
+	letter-spacing: 0;
+	
+  }
+  .qtip:after {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	content: '';
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease-in-out
+  }
+  .qtip:hover:before,
+  .qtip:hover:after {
+	visibility: visible;
+	opacity: 1
+  }
+  .qtip.tip-bottom:before {
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, calc(100% + 8px));
+	box-sizing: border-box;
+	border-radius: 0px;
+  }
+  .qtip.tip-bottom:after {
+	
+	border-color: transparent transparent#e8e8e8 transparent;
+	bottom: -10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+  }
+
+
+/* ABOUT PAGE */
+
+
+  .about-div {
+	box-sizing: border-box;
+	display: block;
+	  
+	  padding: 5rem 2vw 10rem;
+	  grid-area: 1 / 1 / 1 / 1;
+  }
+
+  .about-div-text {
+	background-color: #f1f1f1;
+	text-align: justify;
+	margin: 1vw;
+    max-width: 800px;
+
+  }
+
+  .about-div-text p {
+	  padding: 2vw;
+	/* margin-block-start: 2vw;
+    margin-block-end: 2vw;
+	margin-inline-start: 2vw;
+    margin-inline-end: 2vw;   */
+  }
+
+
+  /* PAPER PAGE */
+
+
+.paper{
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	padding: 2rem 2vw 10rem;
+
+}
+
+.paper-div-text {
+	float: left;
+	width: 65%;
+	background-color: #f1f1f1;
+	text-align: justify;
+	margin: 1vw;
+	/* max-width: 800px; */
+	padding: 2vw;
+
+  }
+
+  .paper-image-div{
+	float: right;
+	width: 30%; 
+	background-color: #f1f1f1;
+	text-align: justify;
+	margin: 1vw;
+	/* max-width: 800px; */
+	padding: 2vw;
+	
+  }
+
+  .paper-image-div figcaption{
+	padding-top: 1vw;
+	color: #57585c;
+	font-size: 14px;
+
+  }
+
+  .inner {
+    margin-left: auto;
+  	margin-right: auto;
+	width: 100%;
+    box-shadow: 0 0 50px 0 rgba(51, 51, 51, 0.7);
+    background-color: #e8e8e8;
+}
+
+  .paper-div-head {
+	box-sizing: border-box;
+	display: block;
+	padding: 1rem 2vw 1rem;
+	grid-area: 1 / 1 / 1 / 1;
+  }
+
+
+
+  .paper-div-text p {
+	  
+
+  }
+
+  .paper-header{
+	text-align: justify;
+	padding: 2vw;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin: 1rem auto; 
+  }
+
+  .paper-subtitle{
+	text-align: justify;
+	padding: 2vw;
+	padding-left: 0vw;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin: 1rem auto; 
+
+  }
+
+  .paper-subtitle02{
+	text-align: justify;
+	padding: 1vw;
+	padding-left: 0vw;
+    font-size: 1rem;
+    font-weight: heavy;
+    margin: 1rem auto; 
+
+  }
+
+  .left {
+	float: left;
+	width: 20%; /* The width is 20%, by default */
+  }
+  
+  .main {
+	float: left;
+	width: 60%; /* The width is 60%, by default */
+  }
+  
+  /* Use a media query to add a breakpoint at 800px: */
+  @media screen and (max-width: 800px) {
+	.left, .main, .right {
+	  width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+	}
+  }
+
+
+  .paper-inlin-subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin: 3rem auto;

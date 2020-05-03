@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Theis Final Site WIP</title>
+		<meta name="description" content="A Masonry-powered grid layout with a motion hover effect on the grid items and a scrollable content view." />
+		<meta name="keywords" content="masonry, grid layout, hover effect, content preview, javascript, gsap, template, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/wwa8pwf.css">
+
+		<script>document.documentElement.className="js";
+			var supportsCssVars=function()
+				{var e,t=document.createElement("style");
+				return t.innerHTML="root: { --tmp-var: bold; }",
+				document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)"))
+				,t.parentNode.removeChild(t),e};supportsCssVars()||alert("");
+		</script> 
+	</head>
+
+
+	<body class="loading">
+
+		<main>
+
+		<div id="mySidenav" class="sidenav">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  			<a href="index.html">Expore</a>
+  			<a href="about.html">About</a>
+  			<a href="paper.html">Paper</a>
+  
+		</div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+
+    <div class="frame">
+			<div class="title">
+					<h4 class="title__name">Paper</h4>
+				</div>
+			</div>
+
+            <div class="paper-div-head">
+                <h3 class="paper-header"> Title Explaining the Work</h3>
+            </div>
+
+
+            <div class="paper">
+                <div class="paper-div-text">
+                    <h3 class="paper-subtitle"> Abstract </h3>  
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+                        </p>   
+                    </div>
+                 
+
+
+            </div>
+
+
+            <div class="paper">
+                                <div class="paper-div-text">
+                <h3 class="paper-subtitle"> Introduction </h3>  
+                    <p>I can be on 
+                        <a class="qtip tip-bottom" data-tip="Reference" href="https://www.w3schools.com/css/css_tooltip.asp">top</a>
+                        , on the 
+                        <i class="qtip tip-bottom" data-tip="Reference" href="https://www.w3schools.com/css/css_tooltip.asp"> ok<sup>1</sup> </i>, 
+                        culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a g
+                    </p>
+
+                     <p>I can be on 
+                        <a class="qtip tip-bottom" data-tip="Reference" href="https://www.w3schools.com/css/css_tooltip.asp">top</a>
+                        , on the 
+                        <i class="qtip tip-bottom" data-tip="Reference" href="https://www.w3schools.com/css/css_tooltip.asp"> ok<sup>1</sup> </i>, 
+                        culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a g
+                    </p>                   
+
+                <h3 class="paper-subtitle"> References </h3>
+                    <p><sup>1</sup> 
+                        first note
+                    </p>
+                       
+                </div>
+                 
+                <div class="paper-image-div">
+                    <img class="inner" data-tilt data-tilt-easing="cubic-bezier(.03,.03,.03,.03)", src="img/cycles07.png" alt="Some image" />
+                    <figcaption>figure caption</figcaption>
+                </div>
+
+                <div class="paper-image-div">
+                    <img class="inner" data-tilt data-tilt-easing="cubic-bezier(.03,.03,.03,.03)", src="img/cycles07.png" alt="Some image" />
+                    <figcaption>figure caption</figcaption>
+                </div>
+                
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+ 
+    </div>
+
+
+
+
+
+		</main>
+
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="leader-line.min.js"></script>
+		<script src="js/demo.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/vanilla-tilt.js"></script>
+        
+		<script src="js/imageTrail.js"></script>
+	</body>
+</html>
