@@ -4,9 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Theis Final SIte WIP</title>
-		<meta name="description" content="A Masonry-powered grid layout with a motion hover effect on the grid items and a scrollable content view." />
-		<meta name="keywords" content="masonry, grid layout, hover effect, content preview, javascript, gsap, template, web design" />
-		<meta name="author" content="Codrops" />
+		<meta name="author" content="Forrest Whitcomb" />		
+		<meta name="description" content="An exploration into the relationships between innovation and tradition in Western Product Design." />
+		<meta name="keywords" content="design, parsons, chairs, traditions, authenticity" />
+
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<link rel="stylesheet" href="https://use.typekit.net/wwa8pwf.css">
@@ -20,224 +21,239 @@
 		</script> 
 	</head>
 
+<!-- HEADER START -->
 
 	<body class="loading">
 
-		<main>
 
+    <div class="paper-div-head">
 		<div id="mySidenav" class="sidenav">
   			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   			<a href="index.html">Expore</a>
   			<a href="about.html">About</a>
   			<a href="paper.html">Paper</a>
+			<a href="tradition.html">More</a>
   
-			</div>
+		</div>
 
-    <div id="main">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+		<div id="main">
+			<span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+		</div>
+
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                    document.getElementById("main").style.marginLeft = "250px";
+                    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("main").style.marginLeft= "0";
+                    document.body.style.backgroundColor = "white";
+                }
+            </script>
+
+		<div class="title">
+			<h4 class="title__name">Essence of Change</h4>
+		</div>
+
+        <h5 class="under-title">A story about chairs</h5>
+        <h3 class="paper-header"> Title Explaining the Work</h3>
+
     </div>
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-        }
+<!-- HEADER END -->
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft= "0";
-            document.body.style.backgroundColor = "white";
-        }
-    </script>
 
-<div class="frame">
-				<div class="title">
-					<h4 class="title__name">Essence of Change</h4>
-				</div>
-			</div>
 
 			<div class="grid-wrap">
 				<div class="grid">
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg" id="start"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/cycles01.png" alt="Some image" />
+					<a href="#" class="thumb"  id="n01">
+						<div class="thumb-bg" ></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img"  src="img/cycles01.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Revivals</h3>
-						<h4 class="grid__item-number">Cycles</h4>
-					</a><div class="grid">
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg" id="start"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/cycles01.png" alt="Some image" />
-						</div>
-						<h3 class="grid__item-title">Revivals</h3>
-						<h4 class="grid__item-number">Cycles</h4>
+						<h3 class="thumb-title">Revivals</h3>
+						<h4 class="thumb-number">Cycles</h4>
 					</a>
-					<a href="#" class="grid__item" >
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/cycles04.png" alt="Some image" />
+					<a href="#" class="thumb" id="n02">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img"  src="img/cycles04.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Invention of Tradition</h3>
-						<h4 class="grid__item-number">Gothic</h4>
+						<h3 class="thumb-title">Invention of Tradition</h3>
+						<h4 class="thumb-number">Gothic</h4>
 					</a>
-					<a href="#" class="grid__item" id="element03">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/cycles08.png" alt="Some image" />
+					<a href="#" class="thumb" id="n03">
+						<div class="thumb-bg" ></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img"  src="img/cycles08.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Step 1</h3>
-						<h4 class="grid__item-number">Innovation</h4>
+						<h3 class="thumb-title">Step 1</h3>
+						<h4 class="thumb-number">Innovation</h4>
 					</a>
-					<a href="#" class="grid__item" >
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/cycles06.png" alt="Some image" />
+					<a href="#" class="thumb" id="n04">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/cycles06.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Step 2</h3>
-						<h4 class="grid__item-number">Proliferation</h4>
+						<h3 class="thumb-title">Step 2</h3>
+						<h4 class="thumb-number">Proliferation</h4>
 					</a>
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/cycles09.png" alt="Some image" />
+					<a href="#" class="thumb" id="n05">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/cycles09.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Step 3</h3>
-						<h4 class="grid__item-number">Tradition</h4>
+						<h3 class="thumb-title">Step 3</h3>
+						<h4 class="thumb-number">Tradition</h4>
 					</a>
-					<a href="#" class="grid__item" id="element04">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/proposals01.png" alt="Some image" />
+					<a href="#" class="thumb" id="n06">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/proposals01.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Proposals</h3>
-						<h4 class="grid__item-number">Proposals</h4>
+						<h3 class="thumb-title">Proposals</h3>
+						<h4 class="thumb-number">Proposals</h4>
 					</a>
-					<a href="#" class="grid__item" >
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/cycles05.png" alt="Some image" />
+					<a href="#" class="thumb" id="n07">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/cycles05.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Fluidity of Authenticity</h3>
-						<h4 class="grid__item-number">Authentic</h4>
+						<h3 class="thumb-title">Fluidity of Authenticity</h3>
+						<h4 class="thumb-number">Authentic</h4>
 					</a>
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/cycles03.png" alt="Some image" />
+					<a href="#" class="thumb" id="n08">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/cycles03.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Step 4</h3>
-						<h4 class="grid__item-number">Abstraction</h4>
+						<h3 class="thumb-title">Step 4</h3>
+						<h4 class="thumb-number">Abstraction</h4>
 					</a>
-					<a href="#" class="grid__item" >
-						<div class="grid__item-bg" id="end"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/proposals04.png" alt="Some image" />
+					<a href="#" class="thumb" id="n09">
+						<div class="thumb-bg" id="end"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/proposals04.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Irony and Ironic</h3>
-						<h4 class="grid__item-number">Lost</h4>
+						<h3 class="thumb-title">Irony and Ironic</h3>
+						<h4 class="thumb-number">Lost</h4>
 					</a>
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/cycles11.png" alt="Some image" />
+					<a href="#" class="thumb" id="n10">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/cycles11.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Identity</h3>
-						<h4 class="grid__item-number">Identity</h4>
+						<h3 class="thumb-title">Identity</h3>
+						<h4 class="thumb-number">Identity</h4>
 					</a>
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/proposals05.png" alt="Some image" />
+					<a href="#" class="thumb" id="n11">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/proposals05.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Bias</h3>
-						<h4 class="grid__item-number">Bias</h4>
+						<h3 class="thumb-title">Bias</h3>
+						<h4 class="thumb-number">Bias</h4>
 					</a>
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/proposals02.png" alt="Some image" />
+					<a href="#" class="thumb" id="n12">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/proposals02.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Providing Alternatives</h3>
-						<h4 class="grid__item-number">Objectivity</h4>
+						<h3 class="thumb-title">Providing Alternatives</h3>
+						<h4 class="thumb-number">Objectivity</h4>
 					</a>										
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/proposals06.png" alt="Some image" />
+					<a href="#" class="thumb" id="n13">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/proposals06.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Aggregate</h3>
-						<h4 class="grid__item-number">Intersections</h4>
+						<h3 class="thumb-title">Aggregate</h3>
+						<h4 class="thumb-number">Intersections</h4>
 					</a>
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/cycles10.png" alt="Some image" />
+					<a href="#" class="thumb"id="n14">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/cycles10.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Essence</h3>
-						<h4 class="grid__item-number">Essence</h4>
+						<h3 class="thumb-title">Essence</h3>
+						<h4 class="thumb-number">Essence</h4>
 					</a>
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/ubiquities01.png" alt="Some image" />
+					<a href="#" class="thumb"id="n15">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/ubiquities01.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Seeking Truths</h3>
-						<h4 class="grid__item-number">Ubiquities</h4>
+						<h3 class="thumb-title">Seeking Truths</h3>
+						<h4 class="thumb-number">Ubiquities</h4>
 					</a>
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/ubiquities03.png" alt="Some image" />
+					<a href="#" class="thumb" id="n16">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/ubiquities03.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Monobloc</h3>
-						<h4 class="grid__item-number">Monobloc</h4>
+						<h3 class="thumb-title">Monobloc</h3>
+						<h4 class="thumb-number">Monobloc</h4>
 					</a>
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/ubiquities09.png" alt="Some image" />
+					<a href="#" class="thumb"id="n17">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/ubiquities09.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Plastic</h3>
-						<h4 class="grid__item-number">Synonymous</h4>
+						<h3 class="thumb-title">Plastic</h3>
+						<h4 class="thumb-number">Synonymous</h4>
 					</a>
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/ubiquities04.png" alt="Some image" />
+					<a href="#" class="thumb"id="n18">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/ubiquities04.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Within a Cycle</h3>
-						<h4 class="grid__item-number">Source</h4>
+						<h3 class="thumb-title">Within a Cycle</h3>
+						<h4 class="thumb-number">Source</h4>
 					</a>	
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/ubiquities05.png" alt="Some image" />
+					<a href="#" class="thumb"id="n19">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/ubiquities05.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Growth</h3>
-						<h4 class="grid__item-number">Expand</h4>
+						<h3 class="thumb-title">Growth</h3>
+						<h4 class="thumb-number">Expand</h4>
 					</a>									
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/ubiquities02.png" alt="Some image" />
+					<a href="#" class="thumb"id="n20">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/ubiquities02.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Futures</h3>
-						<h4 class="grid__item-number">Futures</h4>
+						<h3 class="thumb-title">Futures</h3>
+						<h4 class="thumb-number">Futures</h4>
 					</a>
-					<a href="#" class="grid__item">
-						<div class="grid__item-bg"></div>
-						<div class="grid__item-wrap">
-							<img class="grid__item-img" src="img/ubiquities08.png" alt="Some image" />
+					<a href="#" class="thumb" id="n21">
+						<div class="thumb-bg"></div>
+						<div class="thumb-wrap">
+							<img class="thumb-img" src="img/ubiquities08.png" alt="Some image" />
 						</div>
-						<h3 class="grid__item-title">Change</h3>
-						<h4 class="grid__item-number">Change</h4>
+						<h3 class="thumb-title">Change</h3>
+						<h4 class="thumb-number">Change</h4>
 					</a>										
 				</div>
 
-	<!-- POP UP IMAGES -->
+<!-- POP UP IMAGES -->
+
+<!-- *
+
+
+Adapting Image trail effect from:
+
+ Copyright 2019, Codrops
+ http://www.codrops.com
+
+* Licensed under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+ 
+
+*/ -->
 
 		<div class="content01">
 				<img class="content__img" src="img/ubiquities02.png" alt="Some image" />
@@ -269,6 +285,16 @@
 					<h3 class="content__item-subtitle">New Normal Revival Symbol Gothic</h3>
 					<div class="content__item-text">
 						<p>There is Something beautifully ubiquitous, something post-colonial, decentralised, everlasting as the resin stacking chair. Synonymous with weddings, beaches, lunches, pool parties and dining tables.</p>
+						<img class="article-image", src="img/cycles07.png" alt="Some image" />
+                    <figcaption>figure caption</figcaption>
+												<p>Monobloc chairs embody many questions and contradictions posed by today’s consumer society. On the one hand, it is the epitome of an affordable—and thus democratic— piece of furniture. On the other, it is criticised for falling short of sustainability targets. </p>
+						<p>Monobloc chairs embody many questions and contradictions posed by today’s consumer society. On the one hand, it is the epitome of an affordable—and thus democratic— piece of furniture. On the other, it is criticised for falling short of sustainability targets. </p>
+						<p>Monobloc chairs embody many questions and contradictions posed by today’s consumer society. On the one hand, it is the epitome of an affordable—and thus democratic— piece of furniture. On the other, it is criticised for falling short of sustainability targets. </p>
+						<p>Monobloc chairs embody many questions and contradictions posed by today’s consumer society. On the one hand, it is the epitome of an affordable—and thus democratic— piece of furniture. On the other, it is criticised for falling short of sustainability targets. </p>
+						<p>Monobloc chairs embody many questions and contradictions posed by today’s consumer society. On the one hand, it is the epitome of an affordable—and thus democratic— piece of furniture. On the other, it is criticised for falling short of sustainability targets. </p>
+						<p>Monobloc chairs embody many questions and contradictions posed by today’s consumer society. On the one hand, it is the epitome of an affordable—and thus democratic— piece of furniture. On the other, it is criticised for falling short of sustainability targets. </p>
+						<p>Monobloc chairs embody many questions and contradictions posed by today’s consumer society. On the one hand, it is the epitome of an affordable—and thus democratic— piece of furniture. On the other, it is criticised for falling short of sustainability targets. </p>
+
 						<p>Monobloc chairs embody many questions and contradictions posed by today’s consumer society. On the one hand, it is the epitome of an affordable—and thus democratic— piece of furniture. On the other, it is criticised for falling short of sustainability targets. </p>
 					</div>
 				</div>
@@ -681,10 +707,15 @@
 
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/masonry.pkgd.min.js"></script>
+		
 		<script src="js/charming.min.js"></script>
 		<script src="js/TweenMax.min.js"></script>
 		<script src="leader-line.min.js"></script>
-		<script src="js/demo.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/grid.js"></script>
+		<script src="js/jquery.js"></script>
+        <script src="js/vanilla-tilt.js"></script>
+		<script src="js/lines.js"></script>
 		<script src="js/imageTrail.js"></script>
 	</body>
 </html>

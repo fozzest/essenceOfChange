@@ -21,11 +21,14 @@
 		} while( elem = elem.offsetParent );
 		return offset;
 	}
+
 	// Calculates the distance between two points.
 	const distance = (p1,p2) => Math.hypot(p2.x-p1.x, p2.y-p1.y);
 	// Generates a random number.
 	const randNumber = (min,max) => Math.floor(Math.random() * (max - min + 1)) + min;
 	// Gets the mouse position. From http://www.quirksmode.org/js/events_properties.html#position
+
+
 	const getMousePos = (e) => {
 		let posx = 0;
 		let posy = 0;
@@ -85,24 +88,24 @@
         constructor(el) {
 			this.DOM = {el: el};
 			// The rectangle element around the image.
-			this.DOM.bg = this.DOM.el.querySelector('.grid__item-bg');
+			this.DOM.bg = this.DOM.el.querySelector('.thumb-bg');
 			// The following DOM elements are elements that will move/tilt when hovering the item.
 			this.DOM.tilt = {};
 			// The image.
-			this.DOM.imgWrap = this.DOM.el.querySelector('.grid__item-wrap');
+			this.DOM.imgWrap = this.DOM.el.querySelector('.thumb-wrap');
 			this.DOM.tilt.img = this.DOM.imgWrap.querySelector('img');
 			// The title (vertical text).
-			this.DOM.tilt.title = this.DOM.el.querySelector('.grid__item-title');
+			this.DOM.tilt.title = this.DOM.el.querySelector('.thumb-title');
 			// The number (horizontal letter/number code).
-			this.DOM.tilt.number = this.DOM.el.querySelector('.grid__item-number');
+			this.DOM.tilt.number = this.DOM.el.querySelector('.thumb-number');
 			// Split the number into spans using charming.js
 			charming(this.DOM.tilt.number);
 			// And access the spans/letters.
 			this.DOM.numberLetters = this.DOM.tilt.number.querySelectorAll('span');
 			// Configuration for when moving/tilting the elements on hover.
 			this.tiltconfig = {   
-                title: {translation : {x: [-8,8], y: [4,-4]}},
-                number: {translation : {x: [-5,5], y: [-10,10]}},
+               // title: {translation : {x: [-8,8], y: [4,-4]}},
+              //  number: {translation : {x: [-5,5], y: [-10,10]}},
                 img: {translation : {x: [-15,15], y: [-10,10]}}
 			};
 			// Get the rotation angle value of the image element.
@@ -112,65 +115,32 @@
             this.initEvents();
 		}
 		initEvents() {
-			/**
-			 * Mouseenter: 
-			 * - Scale up the DOM.bg element.
-			 * - Animate the number letters.
-			 * 
-			 * Mousemove: 
-			 * - tilt - move both the number, image and title elements. 
-			 * 
-			 * 
-			 * Mouseleave: 
-			 * - Scale down the DOM.bg element.
-			 * - Animate the number letters.
-			 */
+
 			this.toggleAnimationOnHover = (type) => {
 				// Scale up the bg element.
 				TweenMax.to(this.DOM.bg, 1, {
 					ease: Expo.easeOut,
 					scale: type === 'mouseenter' ? 1.15 : 1
 				});
-
-
-
-
-
-				// Animate the number letters.
-				this.DOM.numberLetters.forEach((letter,pos) => {
-					TweenMax.to(letter, .2, {
-						ease: Quad.easeIn,
-						delay: pos*.1,
-						y: type === 'mouseenter' ? '-50%' : '50%',
-						opacity: 0,
-						onComplete: () => {
-							TweenMax.to(letter, type === 'mouseenter' ? 0.6 : 1, {
-								ease: type === 'mouseenter' ? Expo.easeOut : Elastic.easeOut.config(1,0.4),
-								startAt: {y: type === 'mouseenter' ? '70%' : '-70%', opacity: 0},
-								y: '0%',
-								opacity: 1
-							});
-						}
-					});
-				});
+				
 			};
 
 
 			this.mouseenterFn = (ev) => {
 				if ( !allowTilt ) return;
 				this.toggleAnimationOnHover(ev.type);
-				this.removelines();
+				
 
 
 
             };
             this.mousemoveFn = (ev) => requestAnimationFrame(() => {
 				if ( !allowTilt ) return;
-                this.tilt(ev);
+                //this.tilt(ev);
             });
             this.mouseleaveFn = (ev) => {
 				if ( !allowTilt ) return;
-				this.resetTilt();
+				//this.resetTilt();
 				this.toggleAnimationOnHover(ev.type);
 				
 
@@ -180,59 +150,7 @@
             this.DOM.el.addEventListener('mousemove', this.mousemoveFn);
             this.DOM.el.addEventListener('mouseleave', this.mouseleaveFn);
 		}
-		tilt(ev) {
-			// Get mouse position.
-			const mousepos = getMousePos(ev);
-            // Document scrolls.
-            const docScrolls = {left : body.scrollLeft + docEl.scrollLeft, top : body.scrollTop + docEl.scrollTop};
-            const bounds = this.DOM.el.getBoundingClientRect();
-            // Mouse position relative to the main element (this.DOM.el).
-            const relmousepos = {
-                x : mousepos.x - bounds.left - docScrolls.left, 
-                y : mousepos.y - bounds.top - docScrolls.top 
-            };
-            // Movement settings for the tilt elements.
-            for (let key in this.DOM.tilt) {
-				let t = this.tiltconfig[key].translation;
-				// Animate each of the elements..
-                TweenMax.to(this.DOM.tilt[key], 2, {
-                    ease: Expo.easeOut,
-                    x: (t.x[1]-t.x[0])/bounds.width*relmousepos.x + t.x[0],
-                    y: (t.y[1]-t.y[0])/bounds.height*relmousepos.y + t.y[0]
-                });
-            }
-		}
 
-		makelines(ev){
-			line.show();
-
-		}
-
-		removelines(ev){
-			var line= new LeaderLine((this.DOM.bg), document.getElementById('element04'),{color: '#27347E', endPlug: 'square', animOptions: {
-				duration: 3000
-			  }});
-
-			line.hide();
-
-		}
-
-		resetTilt() {
-			for (let key in this.DOM.tilt ) {
-                TweenMax.to(this.DOM.tilt[key], 2, {
-					ease: Elastic.easeOut.config(1,0.4),
-                    x: 0,
-                    y: 0
-                });
-            }
-		}
-
-		
-		/**
-		 * Hides the item:
-		 * - Scales down and fades out the image and bg elements.
-		 * - Moves down and fades out the title and number elements.
-		 */
 		hide(withAnimation = true) { this.toggle(withAnimation,false); }
 		/**
 		 * Resets.
@@ -278,6 +196,9 @@
 	// hideButton.addEventListener('click', function() { line.hide(); }, false);
 
 	// The Content class. Represents one content item per grid item.
+
+
+
     class Content {
         constructor(el) {
 			this.DOM = {el: el};
@@ -292,20 +213,23 @@
 			this.DOM.titleLetters = this.DOM.title.querySelectorAll('span');
 			this.titleLettersTotal = this.DOM.titleLetters.length;
 		}
-		/**
-		 * Show/Hide the content elements (title letters, the subtitle and the text).
-		 */
+/**
+	 * Show/Hide the content elements (title letters, the subtitle and the text).
+	* 
+	* TweenMax turorial from:
+	 * https://greensock.com/splittext/
+	* 
+	*/
+
         show(delay = 0, withAnimation = true) { this.toggle(delay, withAnimation); }
         hide(delay = 0, withAnimation = true) { this.toggle(delay, withAnimation, false); }
 		toggle(delay, withAnimation, show = true) {
 			setTimeout(() => {
-				
 				this.DOM.titleLetters.forEach((letter,pos) => {
-					TweenMax.to(letter, !withAnimation ? 0 : show ? .6 : .3, {
-						ease: show ? Back.easeOut : Quart.easeIn,
+					TweenMax.to(letter, !withAnimation ? 0 : show ? .5 : .1, {
 						delay: !withAnimation ? 0 : show ? pos*.05 : (this.titleLettersTotal-pos-1)*.04,
 						startAt: show ? {y: '50%', opacity: 0} : null,
-						y: show ? '0%' : '50%',
+						
 						opacity: show ? 1 : 0
 					});
 				});
@@ -316,6 +240,8 @@
 		}
     }
 
+
+	
 	// The Grid class.
     class Grid {
         constructor(el) {
@@ -324,7 +250,7 @@
 			this.DOM.gridWrap = this.DOM.el.parentNode;
 			// The grid items.
             this.items = [];
-            Array.from(this.DOM.el.querySelectorAll('.grid__item')).forEach(itemEl => this.items.push(new GridItem(itemEl)));
+            Array.from(this.DOM.el.querySelectorAll('.thumb')).forEach(itemEl => this.items.push(new GridItem(itemEl)));
             // The total number of items.
 			this.itemsTotal = this.items.length;
 			// The content items.
@@ -383,7 +309,7 @@
 			item.hideTexts();
 			// Set the item´s z-index to a high value so it overlaps any other grid item.
 			item.DOM.el.style.zIndex = 1000;
-			// Get the "grid__item-bg" width and height and set it explicitly, 
+			// Get the "thumb-bg" width and height and set it explicitly, 
 			// also set its top and left respective to the page.
 			const itemDim = this.getSizePosition(item.DOM.el);
 			item.DOM.bg.style.width = `${itemDim.width}px`;
@@ -533,10 +459,8 @@
 	
 			return output;
 		}
-		/**
-		 * Shows/Hides all the grid items except the "exclude" item.
-		 * The items will be sorted based on the distance to the exclude item.
-		 */
+
+		
 		showAllItems(exclude, withAnimation = true) { this.toggleAllItems(exclude, withAnimation); }
 		hideAllItems(exclude, withAnimation = true) { this.toggleAllItems(exclude, withAnimation, false); }
 		toggleAllItems(exclude, withAnimation, show = true) {
@@ -559,16 +483,7 @@
 	let allowTilt = true;
 
 
-	//make arrows
-	
 
-	// var line= new LeaderLine((this.DOM.bg), document.getElementById('element04'),{color: '#27347E', endPlug: 'square', animOptions: {
-	// 	duration: 3000
-	//   }});
-
-	// line.hide();
-
-	
 	
 	// Caching some stuff..
 	const body = document.body;
@@ -584,11 +499,11 @@
 		const grid = new Grid(document.querySelector('.grid'));
 
 	// Preload images.
-	imagesLoaded(document.querySelectorAll('.grid__item-img'), () => {
+	imagesLoaded(document.querySelectorAll('.thumb-img'), () => {
 		body.classList.remove('loading');
 		var msnry = new Masonry( grid.DOM.el, {
 			// options
-			itemSelector: '.grid__item',
+			itemSelector: '.thumb',
 			columnWidth: 260,
 			gutter: 100,
 			fitWidth: true

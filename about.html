@@ -4,9 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Theis Final SIte WIP</title>
-		<meta name="description" content="A Masonry-powered grid layout with a motion hover effect on the grid items and a scrollable content view." />
-		<meta name="keywords" content="masonry, grid layout, hover effect, content preview, javascript, gsap, template, web design" />
-		<meta name="author" content="Codrops" />
+		<meta name="author" content="Forrest Whitcomb" />		
+		<meta name="description" content="An exploration into the relationships between innovation and tradition in Western Product Design." />
+		<meta name="keywords" content="design, parsons, chairs, traditions, authenticity" />
+
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<link rel="stylesheet" href="https://use.typekit.net/wwa8pwf.css">
@@ -20,44 +21,53 @@
 		</script> 
 	</head>
 
+<!-- HEADER START -->
 
 	<body class="loading">
 
-		<main>
 
+    <div class="paper-div-head">
 		<div id="mySidenav" class="sidenav">
   			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   			<a href="index.html">Expore</a>
   			<a href="about.html">About</a>
   			<a href="paper.html">Paper</a>
+			<a href="tradition.html">More</a> 
   
-			</div>
+		</div>
 
-    <div id="main">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+		<div id="main">
+			<span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+		</div>
+
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                    document.getElementById("main").style.marginLeft = "250px";
+                    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("main").style.marginLeft= "0";
+                    document.body.style.backgroundColor = "white";
+                }
+            </script>
+
+		<div class="title">
+			<h4 class="title__name">About</h4>
+		</div>
+
+        <h5 class="under-title">A story about chairs</h5>
+        <h3 class="paper-header"> Title Explaining the Work</h3>
+
     </div>
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-        }
+<!-- HEADER END -->
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft= "0";
-            document.body.style.backgroundColor = "white";
-        }
-    </script>
 
-<div class="frame">
-				<div class="title">
-					<h4 class="title__name">About</h4>
-				</div>
-			</div>
 
-			             <div class="paper">
+		<div class="paper">
             <div class="paper-div-text">
                 <h3 class="paper-subtitle"> Introduction </h3>  
                     <p>I can be on 
@@ -86,22 +96,107 @@
                     <figcaption>figure caption</figcaption>
                 </div>
 
-                
+            
+         </div>
 
-            </div>   
+		 <div class="paper">
+		 	<div class="about-gallery">
+				<h3 class="paper-subtitle"> Process </h3>  
+					<p>I can be on 
+                        <a class="qtip tip-bottom" data-tip="Reference" href="https://www.w3schools.com/css/css_tooltip.asp">top</a>
+                        , on the 
+                        <i class="qtip tip-bottom" data-tip="Reference" href="https://www.w3schools.com/css/css_tooltip.asp"> ok<sup>1</sup> </i>, 
+                        culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a g
+                    </p>
 
-             <div class="paper">
+				<div class="about-col01">
+					<img class="inner" data-tilt data-tilt-easing="cubic-bezier(.03,.03,.03,.03)", src="img/cycles07.png" alt="Some image" />
+					<figcaption>culture’s identity during tim, traditions are oftentimes invented or repurposed to create and anchor a g</figcaption>
+				</div>
+				<div class="about-col01">
+					<img class="inner" data-tilt data-tilt-easing="cubic-bezier(.03,.03,.03,.03)", src="img/cycles07.png" alt="Some image" />
+					<figcaption>figure caption</figcaption>
+				</div>
+				<div class="about-col01">
+					<img class="inner" data-tilt data-tilt-easing="cubic-bezier(.03,.03,.03,.03)", src="img/cycles07.png" alt="Some image" />
+					<figcaption>figure caption</figcaption>
+				</div>
+				
+				
+				<p>I can be on 
+                        <a class="qtip tip-bottom" data-tip="Reference" href="https://www.w3schools.com/css/css_tooltip.asp">top</a>
+                        , on the 
+                        <i class="qtip tip-bottom" data-tip="Reference" href="https://www.w3schools.com/css/css_tooltip.asp"> ok<sup>1</sup> </i>, 
+                        culture’s identity during times of change. The recollection (or formation) of tradition occurs more frequently under rapid transformations in society, or when a way of life feels threatened. Unstable social climates, such as industrialization in 19th century Britain, or the rapidly expanding 21st century digital age, threaten to destroy existing traditions. Because of this, new traditions are updated, or as Hobsbawm and Ranger would suggest, ‘invented,’ to resist the contemporary climate. During the Industrial Revolution, some people looked to historical examples of art and design as a way of trying to return to a romanticized moral home, a way of maintaining self-identity as the world changed. Through the practice of Gothic Revival design, the focus of craft in the Arts and Craft movement, and the role of textiles in the ideological competition between industrial manufacture and traditional techniques and motifs, it is clear that throughout the past 200 years of Western society, traditions are oftentimes invented or repurposed to create and anchor a g
+                    </p>
+
+						<div class="about-col01">
+					<img class="inner" data-tilt data-tilt-easing="cubic-bezier(.03,.03,.03,.03)", src="img/cycles07.png" alt="Some image" />
+					<figcaption>culture’s identity during tim, traditions are oftentimes invented or repurposed to create and anchor a g</figcaption>
+				</div>
+				<div class="about-col01">
+					<img class="inner" data-tilt data-tilt-easing="cubic-bezier(.03,.03,.03,.03)", src="img/cycles07.png" alt="Some image" />
+					<figcaption>figure caption</figcaption>
+				</div>
+				<div class="about-col01">
+					<img class="inner" data-tilt data-tilt-easing="cubic-bezier(.03,.03,.03,.03)", src="img/cycles07.png" alt="Some image" />
+					<figcaption>figure caption</figcaption>
+				</div>
+				
+
+			 </div>
+		 </div>   
+
+
+        <div class="paper">
             <div class="paper-div-text">                 
 
                 <h3 class="paper-subtitle"> References </h3>
-				<h3 class="paper-subtitle02"> Site Resources</h3>
+				<h3 class="paper-subtitle02"> Code Resources</h3>
                     <p><sup>1</sup> 
-                        first note
+                        <a href="https://greensock.com/tweenmax" style="color:#272526 ">TweenMax</a> by Greenstock
                     </p>
+                    <p><sup>2</sup> 
+                        <a href="https://github.com/codrops/ImageTrailEffects/" style="color:#272526 ">Image trails</a> from Codrops
+                    </p> 					
+                    <p><sup>3</sup> 
+                        <a href="https://greensock.com/tweenmax" style="color:#272526 ">Charming</a> by Yuan Qing
+                    </p>  
+                    <p><sup>4</sup> 
+                        <a href="https://imagesloaded.desandro.com/" style="color:#272526 ">imagesLoaded</a> by Dave DeSandro
+                    </p>   
+                    <p><sup>5</sup> 
+                        <a href="https://github.com/codrops/AnimatedGridPreviews/tree/master/js" style="color:#272526 ">Animated Grid Previews</a> by Mary Lou
+                    </p>  	
+                    <p><sup>6</sup> 
+                        <a href="https://github.com/codrops/AnimatedImageColumns/" style="color:#272526 ">Animated Image Columns</a> by Mary Lou
+                    </p> 	
+                    <p><sup>7</sup> 
+                        <a href="https://www.w3schools.com/howto/howto_js_sidenav.asp" style="color:#272526 ">Sidenav</a> from w3schools
+                    </p> 	
+                    <p><sup>8</sup> 
+                        <a href="https://github.com/anseki/leader-line#color-value" style="color:#272526 ">Leader-line</a> by anseki
+                    </p> 	
+                    <p><sup>9</sup> 
+                        <a href="https://github.com/anseki/leader-line#color-value" style="color:#272526 ">Tooltip</a> by deineko
+                    </p> 																							                 
+                    <p><sup>10</sup> 
+                        <a href="https://micku7zu.github.io/vanilla-tilt.js/" style="color:#272526 ">Vanilla-Tilt.js</a> adapted from tilt.js by Gijls Roge
+                    </p> 
+                    <p><sup>11</sup> 
+                        <a href="https://github.com/codrops/DraggableMenu" style="color:#272526 ">Draggable Menu with Image Grid Previews</a> from Codrops			
+                    </p> 					
+
+													
                     
-				<h3 class="paper-subtitle02"> For a list of image and text references, see the academic paper <a href="paper.html">here</a>.</h3>
+				<h3 class="paper-subtitle02"> For a list of image and text references, see the academic paper <a href="paper.html" style="color:#272526 ">here</a>.</h3>
+
+			<p>
+			Special thank you to friends and instructors at Parsons School of Design for all the help, as well as my thesis mentors Brad MacDonald, Jamie Keiles, Alexander King, Ernesto Klar, Ayo Okunseinde, and Colleen Macklin.
+			</p>
 
                 </div>
+
                  
 
 
@@ -116,7 +211,7 @@
 		<script src="js/charming.min.js"></script>
 		<script src="js/TweenMax.min.js"></script>
 		<script src="leader-line.min.js"></script>
-		<script src="js/demo.js"></script>
+		<script src="js/main.js"></script>
         <script src="js/jquery.js"></script>
         <script src="js/vanilla-tilt.js"></script>
         
