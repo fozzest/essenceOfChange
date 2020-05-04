@@ -1,11 +1,21 @@
-/**
-
- *
+/* Javascript HQ for Essence of Change by Forrest Whitcomb
+ * 
+ * Referencing:
+ * 
+ * AnimatedImageColumns
+ * https://github.com/codrops/AnimatedImageColumns/
+ * 
+ * DraggableMenu
+ * https://github.com/codrops/DraggableMenu
+ * 
+ * From
+ * Codrops
+ * http://www.codrops.com
+ * 
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  * 
- * Copyright 2018, Codrops
- * http://www.codrops.com
+ * Other reference materials are mentioned in-line
  */
 {
 	// Calculates the offsetTop or offsetLeft of an element relative to the viewport 

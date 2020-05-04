@@ -1,10 +1,15 @@
-//hard coded implementation of Leader-Line by anseki
 
-//https://github.com/anseki/leader-line#color-value
+/* Leader lines javascript for Essence of Change 
+ * 
+ * Referencing:
+ * 
+ * Leader-Line by anseki
+ * https://github.com/anseki/leader-line#color-value
+ * 
+ *to be streamlined at a later date
+ */
 
-//to be streamlined
-
-// 1
+ // 1
 
 document.getElementById("n01").onmouseenter = function() {mouseEnter01()};
 document.getElementById("n01").onmouseleave = function() {mouseLeave01()};

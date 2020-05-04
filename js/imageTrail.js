@@ -1,6 +1,6 @@
 /**
 
-Adapting Image trail effect from:
+Using Image trail effect from:
 
  Copyright 2019, Codrops
  http://www.codrops.com
