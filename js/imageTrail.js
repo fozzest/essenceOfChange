@@ -9,6 +9,8 @@ Using Image trail effect from:
 * http://www.opensource.org/licenses/mit-license.php
  
 
+* produces a string of images that emit from a mouse
+
 */
 {
     const body = document.body;
@@ -118,13 +120,13 @@ Using Image trail effect from:
                 scale: 1,
                 zIndex: this.zIndexVal,
                 x: cacheMousePos.x - img.rect.width/2,
-                y: cacheMousePos.y - img.rect.height/2
+                y: cacheMousePos.y - img.rect.height/0.7
             }, 0)
             // animate
             .to(img.DOM.el, 1, {
                 ease: Expo.easeOut,
                 x: mousePos.x - img.rect.width/5,
-                y: mousePos.y - img.rect.height/5
+                y: mousePos.y - img.rect.height/0.7
             }, 0)
             //disappear
             .to(img.DOM.el, 1, {
@@ -139,8 +141,6 @@ Using Image trail effect from:
         }
     }
 
-    /***********************************/
-    /********** Preload stuff **********/
 
     // Preload images
     const preloadImages = () => {
