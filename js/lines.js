@@ -603,7 +603,7 @@ var line05;
 function mouseEnter11() {
      line01 = new LeaderLine(
         document.getElementById('n11'),
-        document.getElementById('n02'),
+        document.getElementById('n01'),
             {color: 'rgb(39, 52, 126, 0.1)' , endPlug: 'square', animOptions: {
             duration: 3000
           }});
@@ -624,7 +624,7 @@ function mouseEnter11() {
           
      line04 = new LeaderLine(
         document.getElementById('n11'),
-        document.getElementById('n05'),
+        document.getElementById('n12'),
             {color: 'rgb(39, 52, 126, 0.1)' , endPlug: 'square', animOptions: {
             duration: 3000
             }});
