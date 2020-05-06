@@ -15,11 +15,12 @@
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  * 
+ * for opening/closing an article within a page
+ * 
  * Other reference materials are mentioned in-line
  */
 {
-	// Calculates the offsetTop or offsetLeft of an element relative to the viewport 
-	// (not counting with any transforms the element might have)
+
 	const getOffset = (elem, axis) => {
 		let offset = 0;
 		const type = axis === 'top' ? 'offsetTop' : 'offsetLeft';
@@ -32,12 +33,19 @@
 		return offset;
 	}
 
-	// Calculates the distance between two points.
 	const distance = (p1,p2) => Math.hypot(p2.x-p1.x, p2.y-p1.y);
-	// Generates a random number.
 	const randNumber = (min,max) => Math.floor(Math.random() * (max - min + 1)) + min;
+	
+	
+	
+	
 	// Gets the mouse position. From http://www.quirksmode.org/js/events_properties.html#position
 
+
+
+	//mouse pos
+	//if page x and oage e good then let x = x
+	//else if scroll
 
 	const getMousePos = (e) => {
 		let posx = 0;
@@ -62,7 +70,11 @@
 		values = values.split(',');
 		return Math.round(Math.asin(values[1]) * (180/Math.PI));
 	};
-	// Scroll control functions. Taken from https://stackoverflow.com/a/4770179.
+
+
+	// Scroll control functions. 
+	
+	//https://stackoverflow.com/a/4770179.
 	const keys = {37: 1, 38: 1, 39: 1, 40: 1};
 	const preventDefault = (e) => {
 		e = e || window.event;
@@ -93,41 +105,38 @@
 		document.onkeydown = null;  
 	}
 	
-	// The GridItem class.
+	// GridItem class.
     class GridItem {
         constructor(el) {
 			this.DOM = {el: el};
-			// The rectangle element around the image.
 			this.DOM.bg = this.DOM.el.querySelector('.thumb-bg');
-			// The following DOM elements are elements that will move/tilt when hovering the item.
-			this.DOM.tilt = {};
-			// The image.
-			this.DOM.imgWrap = this.DOM.el.querySelector('.thumb-wrap');
+				this.DOM.tilt = {};
+				this.DOM.imgWrap = this.DOM.el.querySelector('.thumb-wrap');
 			this.DOM.tilt.img = this.DOM.imgWrap.querySelector('img');
-			// The title (vertical text).
 			this.DOM.tilt.title = this.DOM.el.querySelector('.thumb-title');
-			// The number (horizontal letter/number code).
 			this.DOM.tilt.number = this.DOM.el.querySelector('.thumb-number');
-			// Split the number into spans using charming.js
+			
+			
+			//  spans using charming.js
 			charming(this.DOM.tilt.number);
-			// And access the spans/letters.
+			// access the spans
+
+			//this.DOM.numberLetters = this.DOM.tilt.number.querySelectorAll('.thumb_title');
+
+
 			this.DOM.numberLetters = this.DOM.tilt.number.querySelectorAll('span');
-			// Configuration for when moving/tilting the elements on hover.
 			this.tiltconfig = {   
-               // title: {translation : {x: [-8,8], y: [4,-4]}},
-              //  number: {translation : {x: [-5,5], y: [-10,10]}},
+               
                 img: {translation : {x: [-15,15], y: [-10,10]}}
 			};
-			// Get the rotation angle value of the image element.
-			// This will be used to rotate the DOM.bg to the same value when expanding/opening the item.
+
 			this.angle = getAngle(this.DOM.tilt.img);
-			// Init/Bind events.
             this.initEvents();
 		}
 		initEvents() {
 
 			this.toggleAnimationOnHover = (type) => {
-				// Scale up the bg element.
+				// Scale up the bg
 				TweenMax.to(this.DOM.bg, 1, {
 					ease: Expo.easeOut,
 					scale: type === 'mouseenter' ? 1.15 : 1
@@ -142,17 +151,24 @@
 				
 
 
-
             };
             this.mousemoveFn = (ev) => requestAnimationFrame(() => {
 				if ( !allowTilt ) return;
-                //this.tilt(ev);
             });
             this.mouseleaveFn = (ev) => {
 				if ( !allowTilt ) return;
-				//this.resetTilt();
 				this.toggleAnimationOnHover(ev.type);
+		
 				
+		// 		showTexts(delay = 0, withAnimation = true) { this.toggleTexts(delay, withAnimation); }
+		// toggleTexts(delay, withAnimation, show = true) {
+		// 	TweenMax.to([this.DOM.tilt.title, this.DOM.tilt.number], !withAnimation ? 0 : show ? 1 : 0.5, {
+		// 		ease: show ? Expo.easeOut : Quart.easeIn,
+		// 		delay: !withAnimation ? 0 : delay,
+		// 		y: show ? 0 : 20,
+		// 		opacity: show ? 1 : 0
+		// 	});
+		// }
 
 
             };
@@ -162,9 +178,7 @@
 		}
 
 		hide(withAnimation = true) { this.toggle(withAnimation,false); }
-		/**
-		 * Resets.
-		 */
+
 		show(withAnimation = true) { this.toggle(withAnimation); }
 		toggle(withAnimation, show = true) {
 			TweenMax.to(this.DOM.tilt.img, withAnimation ? 0.8 : 0, {
@@ -181,7 +195,6 @@
 			});
 			this.toggleTexts(show ? 0.45 : 0, withAnimation, show);
 		}
-		// hides the texts (translate down and fade out).
 		hideTexts(delay = 0, withAnimation = true) { this.toggleTexts(delay, withAnimation, false); }
 		// shows the texts (reset transforms and fade in).
 		showTexts(delay = 0, withAnimation = true) { this.toggleTexts(delay, withAnimation); }
@@ -200,6 +213,8 @@
 		for (let i = 0; i < articles.length; i++) {
   		articles[i].style.fontFamily = 'Comic Sans MS';
 	}
+
+//moved lines to seperate js .... /lines.js
 
 	// var line01 = new LeaderLine(start, end, {hide: true});
 	// showButton.addEventListener('click', function() { line.show(); }, false);
@@ -224,8 +239,7 @@
 			this.titleLettersTotal = this.DOM.titleLetters.length;
 		}
 /**
-	 * Show/Hide the content elements (title letters, the subtitle and the text).
-	* 
+
 	* TweenMax turorial from:
 	 * https://greensock.com/splittext/
 	* 
@@ -251,14 +265,12 @@
     }
 
 
-	
-	// The Grid class.
     class Grid {
         constructor(el) {
 			this.DOM = {el: el};
-			// The grid wrap.
+
 			this.DOM.gridWrap = this.DOM.el.parentNode;
-			// The grid items.
+
             this.items = [];
             Array.from(this.DOM.el.querySelectorAll('.thumb')).forEach(itemEl => this.items.push(new GridItem(itemEl)));
             // The total number of items.
@@ -266,12 +278,11 @@
 			// The content items.
 			this.contents = [];
 			Array.from(document.querySelectorAll('.content > .content__item')).forEach(contentEl => this.contents.push(new Content(contentEl)));
-			// Back control and scroll indicator (elements shown when the item´s content is open).
 			this.DOM.closeCtrl = document.querySelector('.content__close');
 			this.DOM.scrollIndicator = document.querySelector('.content__indicator');
 			// The open grid item.
 			this.current = -1;
-            // Init/Bind events.
+
             this.initEvents();
 		}
 		initEvents() {
@@ -305,85 +316,84 @@
 		openItem(item) {
 			if ( this.isAnimating ) return;
 			this.isAnimating = true;
-			// Get the current scroll position.
-			this.scrollPos = window.scrollY;
-			// Disable page scrolling.
-			disableScroll();
-			// Disable tilt.
+					this.scrollPos = window.scrollY;
+				disableScroll();
 			allowTilt = false;
-			// Set the current value (index of the clicked item).
-			this.current = this.items.indexOf(item);
-			// Hide all the grid items except the one we want to open.
-			this.hideAllItems(item);
-			// Also hide the item texts.
+				//  index of the clicked item
+				this.current = this.items.indexOf(item);
+				this.hideAllItems(item);
+
+
+
+			// 	item.hideTexts();
+			// item.DOM.el.style.zIndex = 1000;
+			// const itemDim = this.getSizePosition(item.DOM.el);
+			// 		item.DOM.bg.style.width = `${itemDim.width}px`;
+			// 	item.DOM.bg.style.height = `${itemDim.height}px`;
+			// item.DOM.bg.style.left = `${itemDim.left}px`;
+			// item.DOM.bg.style.top = `${itemDim.top}px`;
+			// item.DOM.bg.style.position = 'fixed';
+
+
 			item.hideTexts();
-			// Set the item´s z-index to a high value so it overlaps any other grid item.
 			item.DOM.el.style.zIndex = 1000;
-			// Get the "thumb-bg" width and height and set it explicitly, 
-			// also set its top and left respective to the page.
 			const itemDim = this.getSizePosition(item.DOM.el);
-			item.DOM.bg.style.width = `${itemDim.width}px`;
-			item.DOM.bg.style.height = `${itemDim.height}px`;
+					item.DOM.bg.style.width = `${itemDim.width}px`;
+				item.DOM.bg.style.height = `${itemDim.height}px`;
 			item.DOM.bg.style.left = `${itemDim.left}px`;
 			item.DOM.bg.style.top = `${itemDim.top}px`;
-			// Set it to position fixed.
 			item.DOM.bg.style.position = 'fixed';
-			// Calculate the viewport diagonal. We will need to take this in consideration when scaling up the item´s bg element.
 			const d = Math.hypot(winsize.width, winsize.height);
-			// Scale up the item´s bg element.
 			TweenMax.to(item.DOM.bg, 1.2, {
 				ease: Expo.easeInOut,
-				delay: 0.4,
+					delay: 0.4,
 				x: winsize.width/2 - (itemDim.left+itemDim.width/2),
 				y: winsize.height/2 - (itemDim.top+itemDim.height/2),
 				scaleX: d/itemDim.width,
 				scaleY: d/itemDim.height,
-				rotation: -1*item.angle*2
+					rotation: -1*item.angle*2
 			});
-			// Get the content element respective to this grid item.
 			const contentEl = this.contents[this.current];
-			// Set it to current.
 			contentEl.DOM.el.classList.add('content__item--current');
-			// Calculate the item´s image and content´s image sizes and positions. 
-			// We need this so we can scale up and translate the item´s image to the same size and position of the content´s image.
 			const imgDim = this.getSizePosition(item.DOM.imgWrap);
 			const contentImgDim = this.getSizePosition(contentEl.DOM.img, false);
-			// Show the back control and scroll indicator and all the item´s content elements (1 second delay).
+
+
+
+			// const imgDim = this.getSizePosition(item.DOM.img);
+			// const contentImgDim = this.getSizePosition(contentEl.DOM.img, true);
+
 			this.showContentElems(contentEl, 1);
-			// Animate the item´s image.
 			TweenMax.to(item.DOM.tilt.img, 1.2, {
 				ease: Expo.easeInOut,
 				delay: 0.55,
-				scaleX: contentImgDim.width/imgDim.width,
+						scaleX: contentImgDim.width/imgDim.width,
 				scaleY: contentImgDim.height/imgDim.height,
 				x: (contentImgDim.left+contentImgDim.width/2)-(imgDim.left+imgDim.width/2),
-				y: (contentImgDim.top+contentImgDim.height/2)-(imgDim.top+imgDim.height/2),
+					y: (contentImgDim.top+contentImgDim.height/2)-(imgDim.top+imgDim.height/2),
 				rotation: 0,
 				onComplete: () => {
-					// Hide the item´s image and show the content´s image. Should both be overlapping.
 					item.DOM.tilt.img.style.opacity = 0;
 					contentEl.DOM.img.style.visibility = 'visible';
-					// Set the main content wrapper to absolute so it´s position at the top.
 					contentEl.DOM.el.parentNode.style.position = 'absolute';
-					// Hiding the grid scroll.
 					this.DOM.gridWrap.classList.add('grid-wrap--hidden');
-					// Scroll up the page.
 					window.scrollTo(0, 0);
-					// Enable page scrolling.
 					enableScroll();
 					this.isAnimating = false;
 				}
 			});
 		}
+
+	//from https://github.com/codrops/DraggableMenu
+
+
 		closeItem(withAnimation = true) {
 			if ( this.isAnimating ) return;
 			this.isAnimating = true;
-			// Get the content element respective to this grid item.
 			const contentEl = this.contents[this.current];
 			// Scroll to the previous scroll position before opening the item.
 			window.scrollTo(0, this.scrollPos);
 			contentEl.DOM.el.parentNode.style.position = 'fixed';
-			// Disable page scrolling.
 			disableScroll();
 			// Showing the grid scroll.
 			this.DOM.gridWrap.classList.remove('grid-wrap--hidden');
@@ -391,8 +401,7 @@
 			const item = this.items[this.current];
 			// Hide the back control and scroll indicator and all the item´s content elements.
 			this.hideContentElems(contentEl, 0, withAnimation);
-			// Set the grid´s image back to visible and hide the content´s one.
-			item.DOM.tilt.img.style.opacity = 1;
+				item.DOM.tilt.img.style.opacity = 1;
 			contentEl.DOM.img.style.visibility = 'hidden';
 			// Animate the grid´s image back to the grid position.
 			TweenMax.to(item.DOM.tilt.img, withAnimation ? 1.2 : 0, {
@@ -403,7 +412,18 @@
 				y: 0,
 				rotation: item.angle*2
 			});
-			// And also the bg element.
+
+//TWEEN
+
+
+// TweenMax.to(item.DOM.bg, withAnimation ? 4.2 : 0, {
+// 	ease: Expo.easeInOut,
+// 	delay: 0.15,
+// 	x: -10,  -10 7
+// 	y: 0.1,
+// 	scaleX: 4,
+// 	scaleY: 1,
+
 			TweenMax.to(item.DOM.bg, withAnimation ? 1.2 : 0, {
 				ease: Expo.easeInOut,
 				delay: 0.15,
@@ -429,13 +449,10 @@
 			// Also show the item texts. (1s delay)
 			item.showTexts(1, withAnimation);
 		}
-		/**
-		 * Toggle the content elements.
-		 */
+
 		showContentElems(contentEl, delay = 0, withAnimation = true) { this.toggleContentElems(contentEl, delay, withAnimation); }
 		hideContentElems(contentEl, delay = 0, withAnimation = true) { this.toggleContentElems(contentEl, delay, withAnimation, false); }
 		toggleContentElems(contentEl, delay, withAnimation, show = true) {
-			// toggle the back control and scroll indicator.
 			TweenMax.to([this.DOM.closeCtrl, this.DOM.scrollIndicator], withAnimation ? 0.8 : 0, {
 				ease: show ? Expo.easeOut : Expo.easeIn,
 				delay: withAnimation ? delay : 0,
@@ -489,7 +506,6 @@
 		}
 	}
 
-	// Controls whether the item will have the "tilt" movement on hover (mousemove) or not.
 	let allowTilt = true;
 
 
